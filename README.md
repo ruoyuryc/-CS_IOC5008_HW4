@@ -1,4 +1,7 @@
 # CS_IOC5008_HW4
+修改的Mask R-CNN
+https://github.com/Jiankai-Sun/Modified-Mask-RCNN
+
 參考資料:
 http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
 

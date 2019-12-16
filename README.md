@@ -5,7 +5,7 @@
 ## Reproducing Submission
 To reproduct my submission without retrainig, do the following steps:
 1. [Installation](#installation)
-2. [Download Image](#Dataset Preparation)
+2. [Dataset Preparation](#Dataset-Preparation)
 3. [Make RGBY Images](#Train and inference)
 4. [Download Pretrained models](#pretrained-models)
 5. [Inference](#inference)

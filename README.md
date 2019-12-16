@@ -5,17 +5,23 @@ Tesla K40m
 ## Reproducing Submission
 
 ## Installation
-
-## Dataset Preparation
-download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
-### Prepare Images
 Clone this repository:
 ```git clone https://github.com/ruoyuryc/CS_IOC5008_HW4```
 Install dependencies:
 ```pip3 install -r requirements.txt```
 Run setup from the repository root directory:
 ```python3 setup.py install```
-
+## Dataset Preparation
+download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
+### Prepare Images
+```
+train data
+  +- train_image
+  +- pascal_train.json
+test data
+  +- test_image
+  +- test.json
+```
 
 
 修改的Mask R-CNN

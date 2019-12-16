@@ -9,14 +9,12 @@ Tesla K40m
 ## Dataset Preparation
 download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
 ### Prepare Images
-```
 Clone this repository:
--git clone https://github.com/ruoyuryc/CS_IOC5008_HW4
+```git clone https://github.com/ruoyuryc/CS_IOC5008_HW4```
 Install dependencies:
--pip3 install -r requirements.txt
+```pip3 install -r requirements.txt```
 Run setup from the repository root directory:
--python3 setup.py install
-```
+```python3 setup.py install```
 
 
 

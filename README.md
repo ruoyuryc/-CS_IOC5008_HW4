@@ -1,7 +1,7 @@
 # CS_IOC5008_HW4-Tiny PASCAL VOC dataset instance segmentation
 code for VRDL homework 4 in National Chiao Tung University
 ## Hardware
-Tesla K40m  
+ - Tesla K40m  
 ## Reproducing Submission
 
 ## Installation
@@ -24,9 +24,20 @@ test data
 ```
 
 
+
+## Train and inference
+
+### Train a new model starting from ImageNet weights and inference
+python3 dataset/tinyVOC.py 
+
+
+### step by step training and inference
+* [VOCtiny.ipynb](samples/demo.ipynb)  Is the easiest way to start. It shows an example of using a model pre-trained on MS COCO to segment objects in your own images. It includes code to run object detection and instance segmentation on arbitrary images.
+
 修改的Mask R-CNN
 https://github.com/aihill/Mask_RCNN_Keras
 (因為直接使用Matterport的Mask R-CNN會有問題)
+
 
 參考資料:
 http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset

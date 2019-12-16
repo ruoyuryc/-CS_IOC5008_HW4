@@ -3,6 +3,14 @@
 ## Hardware
  - Tesla K40m  
 ## Reproducing Submission
+To reproduct my submission without retrainig, do the following steps:
+1. [Installation](#installation)
+2. [Download Image](#Dataset Preparation)
+3. [Make RGBY Images](#Train and inference)
+4. [Download Pretrained models](#pretrained-models)
+5. [Inference](#inference)
+6. [Make Submission](#make-submission)
+
 
 ## Installation
 Clone this repository:

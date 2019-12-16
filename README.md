@@ -26,10 +26,10 @@ test data
 
 
 ## Train and inference
-
 ### Train a new model starting from ImageNet weights and inference
-python3 dataset/tinyVOC.py 
-
+```
+$ python3 dataset/tinyVOC.py 
+```
 ### step by step training and inference
 * [VOCtiny.ipynb](samples/demo.ipynb)  Is the easiest way to start. It shows how to train Mask R_CNN model pre-trained on imagenet to segment objects in this homework dataset. It includes code to run object detection and instance segmentation on arbitrary images.
 

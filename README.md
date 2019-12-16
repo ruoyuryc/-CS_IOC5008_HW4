@@ -1,16 +1,16 @@
-# CS_IOC5008_HW4-Tiny PASCAL VOC dataset instance segmentation
-code for VRDL homework 4 in National Chiao Tung University
+# CS_IOC5008_HW4
+**Code for "VRDL homework 4: Tiny PASCAL VOC dataset instance segmentation" in National Chiao Tung University**
 ## Hardware
  - Tesla K40m  
 ## Reproducing Submission
 
 ## Installation
 Clone this repository:
-```git clone https://github.com/ruoyuryc/CS_IOC5008_HW4```
+```git clone https://github.com/ruoyuryc/CS_IOC5008_HW4```</br>
 Install dependencies:
-```pip3 install -r requirements.txt```
+```pip3 install -r requirements.txt```</br>
 Run setup from the repository root directory:
-```python3 setup.py install```
+```python3 setup.py install```</br>
 ## Dataset Preparation
 download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
 ### Prepare Images
@@ -23,7 +23,7 @@ test data
   +- test.json
 ```
 
-
+1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
 
 ## Train and inference
 ### Train a new model starting from ImageNet weights and inference

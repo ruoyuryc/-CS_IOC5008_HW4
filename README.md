@@ -1,4 +1,18 @@
-# CS_IOC5008_HW4
+# CS_IOC5008_HW4-Tiny PASCAL VOC dataset instance segmentation
+code for VRDL homework 4 in National Chiao Tung University
+## Hardware
+Tesla K40m  
+## Reproducing Submission
+
+## Installation
+
+## Dataset Preparation
+download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
+### Prepare Images
+
+
+
+
 修改的Mask R-CNN
 https://github.com/aihill/Mask_RCNN_Keras
 (因為直接使用Matterport的Mask R-CNN會有問題)

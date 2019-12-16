@@ -6,9 +6,7 @@
 To reproduct my submission without retrainig, do the following steps:
 1. [Installation](#installation)
 2. [Dataset Preparation](#Dataset-Preparation)
-3. [Make RGBY Images](#Train and inference)
-4. [Download Pretrained models](#pretrained-models)
-5. [Inference](#inference)
+5. [Train and inference](#Train-and-inference)
 6. [Make Submission](#make-submission)
 
 
@@ -33,7 +31,7 @@ test data
 
 1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
 
-## Train and inference
+## Train and Inference
 ### Train a new model starting from ImageNet weights and inference
 ```
 $ python3 dataset/tinyVOC.py 
@@ -45,7 +43,7 @@ $ python3 dataset/tinyVOC.py
 https://github.com/aihill/Mask_RCNN_Keras
 (因為直接使用Matterport的Mask R-CNN會有問題)
 
-
+## Make Submission
 參考資料:
 http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
 

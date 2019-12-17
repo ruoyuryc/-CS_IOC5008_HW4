@@ -20,6 +20,7 @@ Run setup from the repository root directory:
 ## Dataset Preparation
 download image on [google drive](https://drive.google.com/drive/u/3/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK)
 ### Prepare Images
+After downloading, the data directory is structured as:
 ```
 train data
   +- train_image
@@ -30,7 +31,8 @@ test data
 ```
 
 1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
-
+### Dataset location
+put the data under CS_IOC5008_HW4/datasets
 ## Train and Inference
 ### Train a new model starting from ImageNet weights and inference
 ```
@@ -44,12 +46,24 @@ https://github.com/aihill/Mask_RCNN_Keras
 (因為直接使用Matterport的Mask R-CNN會有問題)
 
 ## Make Submission
-參考資料:
-http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
 
 
-augmentation:
-http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
-https://inclass.kaggle.com/hmendonca/mask-rcnn-with-submission/code
-https://github.com/NovatecConsulting/SemanticSegmentation-Examples/blob/master/RSNA%20Pneumonia%20Detection%20(TF%20with%20Mask%20R-CNN)/TransferLearning_MaskRCNN.ipynb
-https://inclass.kaggle.com/drt2290078/mask-rcnn-sample-starter-code
+## Other refenence
+modified Mask R-CNN:[https://github.com/aihill/Mask_RCNN_Keras]<\br>
+[http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset]
+[https://inclass.kaggle.com/hmendonca/mask-rcnn-with-submission/code]
+[https://github.com/NovatecConsulting/SemanticSegmentation-Examples/blob/master/RSNA%20Pneumonia%20Detection%20(TF%20with%20Mask%20R-CNN)/TransferLearning_MaskRCNN.ipynb]
+[https://inclass.kaggle.com/drt2290078/mask-rcnn-sample-starter-code]
+
+
+## Citation
+Use this bibtex to cite this repository:
+```
+@misc{matterport_maskrcnn_2017,
+  title={Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow},
+  author={Waleed Abdulla},
+  year={2017},
+  publisher={Github},
+  journal={GitHub repository},
+  howpublished={\url{https://github.com/matterport/Mask_RCNN}},
+}

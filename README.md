@@ -36,6 +36,9 @@ put the train data and pascal_train.json under CS_IOC5008_HW4/datasets/dataset/t
 put the test data  CS_IOC5008_HW4/datasets/dataset/test_images
 put test.json under CS_IOC5008_HW4/datasets/dataset
 
+### Download Pretrained Weight
+Download Pretrained Weight on [google drive](https://drive.google.com/file/d/1f6xUQBtY_p23lwXIo87NBR3Z5nS80rcE/view?usp=sharing)
+
 ## Train and Inference
 ### Train a new model starting from ImageNet weights and inference
 ```

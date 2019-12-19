@@ -32,7 +32,10 @@ test data
 
 1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
 ### Dataset location
-put the data under CS_IOC5008_HW4/datasets
+put the train data and pascal_train.json under CS_IOC5008_HW4/datasets/dataset/train_images
+put the test data  CS_IOC5008_HW4/datasets/dataset/test_images
+put test.json under CS_IOC5008_HW4/datasets/dataset
+
 ## Train and Inference
 ### Train a new model starting from ImageNet weights and inference
 ```
@@ -41,16 +44,16 @@ $ python3 dataset/tinyVOC.py
 ### step by step training and inference
 * [VOCtiny.ipynb](samples/demo.ipynb)  Is the easiest way to start. It shows how to train Mask R_CNN model pre-trained on imagenet to segment objects in this homework dataset. It includes code to run object detection and instance segmentation on arbitrary images.
 
-修改的Mask R-CNN
-https://github.com/aihill/Mask_RCNN_Keras
-(因為直接使用Matterport的Mask R-CNN會有問題)
 
 ## Make Submission
 
 
 ## Other refenence
-modified Mask R-CNN: </br>
+modified model.py: </br>
 https://github.com/aihill/Mask_RCNN_Keras</br>
+```
+make trouble by direct using orignal Mask R-CNN by Matterport
+```
 Data Augmentation:</br>
 http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
 https://inclass.kaggle.com/hmendonca/mask-rcnn-with-submission/code

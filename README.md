@@ -42,7 +42,7 @@ Download Pretrained Weight on [google drive](https://drive.google.com/file/d/1f6
 ## Train and Inference
 ### Train a new model starting from ImageNet weights and inference
 ```
-$ python3 dataset/tinyVOC.py 
+$ python3 dataset/hw4.py 
 ```
 ### step by step training and inference
 download notebook on [google drive](https://drive.google.com/file/d/1iYKLUtJBNXG5UyJhOiPTkG4LWv2yYFzy/view?usp=sharing)

@@ -32,9 +32,9 @@ test data
 
 1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
 ### Dataset location
-put the train data and pascal_train.json under CS_IOC5008_HW4/datasets/dataset/train_images
-put the test data  CS_IOC5008_HW4/datasets/dataset/test_images
-put test.json under CS_IOC5008_HW4/datasets/dataset
+put the **train data** and **pascal_train.json** under **CS_IOC5008_HW4/datasets/dataset/train_images</br>
+put the **test data**  CS_IOC5008_HW4/datasets/dataset/test_images</br>
+put **test.json** under CS_IOC5008_HW4/datasets/dataset</br>
 
 ### Download Pretrained Weight
 Download Pretrained Weight on [google drive](https://drive.google.com/file/d/1f6xUQBtY_p23lwXIo87NBR3Z5nS80rcE/view?usp=sharing)

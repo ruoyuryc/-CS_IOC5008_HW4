@@ -55,9 +55,7 @@ download notebook on [google drive](https://drive.google.com/file/d/1iYKLUtJBNXG
 ## Other refenence
 modified model.py: </br>
 https://github.com/aihill/Mask_RCNN_Keras</br>
-```
-make trouble by direct using orignal Mask R-CNN by Matterport
-```
+**make trouble by direct using orignal Mask R-CNN by Matterport</br>**
 Data Augmentation:</br>
 http://www.immersivelimit.com/tutorials/using-mask-r-cnn-on-custom-coco-like-dataset
 https://inclass.kaggle.com/hmendonca/mask-rcnn-with-submission/code

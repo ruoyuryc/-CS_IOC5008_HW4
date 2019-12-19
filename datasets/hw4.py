@@ -67,7 +67,7 @@ class CigButtsConfig(Config):
     IMAGES_PER_GPU = 1
 
     # Number of classes (including background)
-    NUM_CLASSES = 1 + 20  # background + 20 (cig_butt)
+    NUM_CLASSES = 1+20  # background + 20 (cig_butt)
 
     # All of our training images are 512x512
     IMAGE_MIN_DIM = 300
@@ -225,7 +225,7 @@ model = modellib.MaskRCNN(mode="training", config=config,
 
 
 # Which weights to start with?
-init_with = 'last'  # imagenet, coco, or last
+init_with = 'imagenet'  # imagenet, coco, or last
 
 if init_with == "imagenet":
     model.load_weights(model.get_imagenet_weights(), by_name=True)
@@ -315,7 +315,7 @@ model.train(dataset_train, dataset_val,
 
 print("Training network All")
 model.train(dataset_train, dataset_val,
-                learning_rate=config.LEARNING_RATE / 10,
+                learning_rate=config.LEARNING_RATE/10,
                 epochs=90,
                 augmentation=augmentation,
                 layers='all')
@@ -326,7 +326,7 @@ model.train(dataset_train, dataset_val,
 
 print("Training network All")
 model.train(dataset_train, dataset_val,
-                learning_rate=config.LEARNING_RATE / 100,
+                learning_rate=config.LEARNING_RATE/100,
                 epochs=100,
                 augmentation=augmentation,
                 layers='all')
@@ -366,7 +366,7 @@ model_path = model.find_last()
 # Load trained weights (fill in path to trained weights here)
 assert model_path != "", "Provide path to trained weights"
 print("Loading weights from ", model_path)
-model.load_weights('/home/haaaaa/test/Mask_RCNN/logs/voc_tiny20191211T2206/mask_rcnn_voc_tiny_0065.h5', by_name=True)
+model.load_weights(model_path, by_name=True)
 
 
 # In[19]:
@@ -501,8 +501,6 @@ for j, image_id in enumerate(dataset_test.image_ids):
     
     
     n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
     for i in range(r['rois'].shape[0]):
         class_id = r['class_ids'][i]
         score = r['scores'][i]
@@ -516,182 +514,6 @@ for j, image_id in enumerate(dataset_test.image_ids):
                 "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
             }
         dicts.append(results)
-
-
-# In[33]:
-
-
-#75
-import cv2
-results = []
-dicts = []     
-for j, image_id in enumerate(dataset_test.image_ids):
-    img = cv2.imread(dataset_test.image_info[image_id]['path'])
-    img_arr = np.array(img)
-    results = model.detect([img_arr], verbose=1)
-    r = results[0]
-    #print(r['masks'])
-    visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
-                                dataset_val.class_names, r['scores'], figsize=(5,5))
-    
-    
-    n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
-    for i in range(r['rois'].shape[0]):
-        class_id = r['class_ids'][i]
-        score = r['scores'][i]
-        bbox = np.around(r['rois'], 1)
-        mask = r['masks'][:, :, i]
-        #pred['segmentation'] = binary_mask_to_rle(r['masks'][:,:,i])
-        results = {
-                "image_id": int(dataset_test.image_info[j]["id"]),
-                "category_id": int(dataset_test.get_source_class_id(class_id, "coco_like")),
-                "score": float(score),
-                "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
-            }
-        dicts.append(results)
-
-
-# In[35]:
-
-
-#70
-import cv2
-results = []
-dicts = []     
-for j, image_id in enumerate(dataset_test.image_ids):
-    img = cv2.imread(dataset_test.image_info[image_id]['path'])
-    img_arr = np.array(img)
-    results = model.detect([img_arr], verbose=1)
-    r = results[0]
-    #print(r['masks'])
-    visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
-                                dataset_val.class_names, r['scores'], figsize=(5,5))
-    
-    
-    n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
-    for i in range(r['rois'].shape[0]):
-        class_id = r['class_ids'][i]
-        score = r['scores'][i]
-        bbox = np.around(r['rois'], 1)
-        mask = r['masks'][:, :, i]
-        #pred['segmentation'] = binary_mask_to_rle(r['masks'][:,:,i])
-        results = {
-                "image_id": int(dataset_test.image_info[j]["id"]),
-                "category_id": int(dataset_test.get_source_class_id(class_id, "coco_like")),
-                "score": float(score),
-                "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
-            }
-        dicts.append(results)
-
-
-# In[58]:
-
-
-#68
-import cv2
-results = []
-dicts = []     
-for j, image_id in enumerate(dataset_test.image_ids):
-    img = cv2.imread(dataset_test.image_info[image_id]['path'])
-    img_arr = np.array(img)
-    results = model.detect([img_arr], verbose=1)
-    r = results[0]
-    #print(r['masks'])
-    visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
-                                dataset_val.class_names, r['scores'], figsize=(5,5))
-    
-    
-    n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
-    for i in range(r['rois'].shape[0]):
-        class_id = r['class_ids'][i]
-        score = r['scores'][i]
-        bbox = np.around(r['rois'], 1)
-        mask = r['masks'][:, :, i]
-        #pred['segmentation'] = binary_mask_to_rle(r['masks'][:,:,i])
-        results = {
-                "image_id": int(dataset_test.image_info[j]["id"]),
-                "category_id": int(dataset_test.get_source_class_id(class_id, "coco_like")),
-                "score": float(score),
-                "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
-            }
-        dicts.append(results)
-
-
-# In[55]:
-
-
-#65
-import cv2
-results = []
-dicts = []     
-for j, image_id in enumerate(dataset_test.image_ids):
-    img = cv2.imread(dataset_test.image_info[image_id]['path'])
-    img_arr = np.array(img)
-    results = model.detect([img_arr], verbose=1)
-    r = results[0]
-    #print(r['masks'])
-    visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
-                                dataset_val.class_names, r['scores'], figsize=(5,5))
-    
-    
-    n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
-    for i in range(r['rois'].shape[0]):
-        class_id = r['class_ids'][i]
-        score = r['scores'][i]
-        bbox = np.around(r['rois'], 1)
-        mask = r['masks'][:, :, i]
-        #pred['segmentation'] = binary_mask_to_rle(r['masks'][:,:,i])
-        results = {
-                "image_id": int(dataset_test.image_info[j]["id"]),
-                "category_id": int(dataset_test.get_source_class_id(class_id, "coco_like")),
-                "score": float(score),
-                "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
-            }
-        dicts.append(results)
-
-
-# In[ ]:
-
-
-#63
-import cv2
-results = []
-dicts = []     
-for j, image_id in enumerate(dataset_test.image_ids):
-    img = cv2.imread(dataset_test.image_info[image_id]['path'])
-    img_arr = np.array(img)
-    results = model.detect([img_arr], verbose=1)
-    r = results[0]
-    #print(r['masks'])
-    visualize.display_instances(img, r['rois'], r['masks'], r['class_ids'], 
-                                dataset_val.class_names, r['scores'], figsize=(5,5))
-    
-    
-    n_instances = len(r['scores'])
-    print("imageId",dataset_test.image_info[j]["id"])
-    print(len(r['class_ids']))
-    for i in range(r['rois'].shape[0]):
-        class_id = r['class_ids'][i]
-        score = r['scores'][i]
-        bbox = np.around(r['rois'], 1)
-        mask = r['masks'][:, :, i]
-        #pred['segmentation'] = binary_mask_to_rle(r['masks'][:,:,i])
-        results = {
-                "image_id": int(dataset_test.image_info[j]["id"]),
-                "category_id": int(dataset_test.get_source_class_id(class_id, "coco_like")),
-                "score": float(score),
-                "segmentation": binary_mask_to_rle(r['masks'][:,:,i])
-            }
-        dicts.append(results)
-
 
 # In[ ]:
 

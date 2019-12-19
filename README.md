@@ -45,11 +45,8 @@ Download Pretrained Weight on [google drive](https://drive.google.com/file/d/1f6
 $ python3 dataset/hw4.py 
 ```
 ### step by step training and inference
-download notebook on [google drive](https://drive.google.com/file/d/1iYKLUtJBNXG5UyJhOiPTkG4LWv2yYFzy/view?usp=sharing)
+download notebook on [google drive](https://drive.google.com/file/d/1iYKLUtJBNXG5UyJhOiPTkG4LWv2yYFzy/view?usp=sharing), and put it under CS_IOC5008_HW4/datasets
 * This is the easiest way to start. It shows how to train Mask R_CNN model pre-trained on imagenet to segment objects in this homework dataset. It includes code to run object detection and instance segmentation on arbitrary images.
-
-
-## Make Submission
 
 
 ## Other refenence

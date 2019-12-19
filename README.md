@@ -32,7 +32,7 @@ test data
 
 1349 training image and 100 testing image collected form voc dataset with 20 classes</br>
 ### Dataset location
-put the **train data** and **pascal_train.json** under **CS_IOC5008_HW4/datasets/dataset/train_images</br>
+put the **train data** and **pascal_train.json** under CS_IOC5008_HW4/datasets/dataset/train_images</br>
 put the **test data**  CS_IOC5008_HW4/datasets/dataset/test_images</br>
 put **test.json** under CS_IOC5008_HW4/datasets/dataset</br>
 
